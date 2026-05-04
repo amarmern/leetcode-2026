@@ -1,3 +1,9 @@
+//This is called Horizontal Scanning
+/*👉 Idea:
+Take the first string as prefix
+Compare it with every other string
+Keep shrinking the prefix until it matches
+*/
 //["flower", "flow", "flight"] → "fl"
 
 function longestCommonPrefix(arr) {
