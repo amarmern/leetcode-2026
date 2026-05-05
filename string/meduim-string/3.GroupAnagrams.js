@@ -1,14 +1,15 @@
-function groupAnagrams(strs) {
-  const map = new Map();
-  for (let str of strs) {
-    let key = str.split('').sort().join('');
-    if (!map.has(key)) {
-      map.set(key, []);
+let arr = ['kmno', 'okmn', 'omkn', 'dell', 'ledl', 'ok', 'ko'];
+
+function anagaram(arr) {
+  let obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    let word = arr[i].split('').sort().join('');
+    if (!obj[word]) {
+      obj[word] = [];
     }
-    map.get(key).push(str);
+    obj[word].push(arr[i]);
   }
-  return Array.from(map.values());
+  return obj;
 }
-// Example
-console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
-// [["eat","tea","ate"], ["tan","nat"], ["bat"]]
+
+console.log(anagaram(arr));

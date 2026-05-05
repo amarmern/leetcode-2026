@@ -1,15 +1,13 @@
 function compressString(str) {
   let result = '';
-  let i = 0;
-  while (i < str.length) {
-    let count = 1;
-    // count repeating characters
-    while (i < str.length - 1 && str[i] === str[i + 1]) {
+  let count = 1;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == str[i + 1]) {
       count++;
-      i++;
+    } else {
+      result += str[i] + count;
+      count = 1;
     }
-    result += str[i] + count;
-    i++;
   }
   return result;
 }
