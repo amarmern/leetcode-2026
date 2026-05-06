@@ -6,7 +6,7 @@ function compressString(str) {
       count++;
     } else {
       result += str[i] + count;
-      count = 1;
+      count = 1; //reset count
     }
   }
   return result;
