@@ -1,0 +1,3 @@
+SELECT id FROM table1
+INTERSECT
+SELECT id FROM table2;
