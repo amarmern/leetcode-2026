@@ -1,15 +1,11 @@
-let str = 'abcabcbb';
+let string = 'abcabcbb';
 //b -> 4
 
 let charMap = {};
 let max = 0;
 let maxChar = '';
-for (let i of str) {
-  if (!charMap[i]) {
-    charMap[i] = 1;
-  } else {
-    charMap[i]++;
-  }
+for (let str of string) {
+  charMap[str] = (charMap[str] || 0) + 1;
 }
 
 for (let char in charMap) {

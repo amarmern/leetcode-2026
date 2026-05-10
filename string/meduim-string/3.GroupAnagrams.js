@@ -13,3 +13,17 @@ function anagaram(arr) {
 }
 
 console.log(anagaram(arr));
+// using reduce function
+let arr = ['kmno', 'okmn', 'omkn', 'dell', 'ledl', 'ok', 'ko'];
+
+const group = arr.reduce((acc, curr) => {
+  // create sorted key
+  let word = curr.split('').sort().join('');
+  if (acc[word]) {
+    acc[word].push(curr);
+  } else {
+    acc[word] = [curr];
+  }
+  return acc;
+}, {});
+console.log(group);

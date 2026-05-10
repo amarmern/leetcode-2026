@@ -80,3 +80,69 @@ const result = Object.values(map);
 console.log(result);
 
 */
+
+/*
+const obj = [
+  [
+    {
+      qty: 1,
+      SKU: "SXW12X",
+      item: "Laptop",
+      price: "1000",
+      wayBill: 123,
+      carrier: "fedx"
+    },
+    {
+      qty: 2,
+      SKU: "SXW13X",
+      item: "Mouse",
+      price: "200",
+      wayBill: 124,
+      carrier: "fedx"
+    }
+  ],
+  [
+    {
+      qty: 1,
+      SKU: "SXW12X",
+      item: "Laptop",
+      price: "100",
+      wayBill: 123,
+      carrier: "fedx"
+    },
+    {
+      qty: 3,
+      SKU: "SXW12X",
+      item: "Laptop",
+      price: "100",
+      wayBill: 123,
+      carrier: "dtdc"
+    },
+    {
+      qty: 1,
+      SKU: "SXW15X",
+      item: "Keyboard",
+      price: "200",
+      wayBill: 125,
+      carrier: "fedx"
+    }
+  ]
+];
+
+// flatten array
+const flatData = obj.flat();
+const map = new Map();
+for (const item of flatData) {
+  // create unique key
+  const key = `${item.SKU}-${item.wayBill}-${item.carrier}`;
+  if (map.has(key)) {
+    // add qty if duplicate
+    map.get(key).qty += item.qty;
+  } else {
+    // store first object
+    map.set(key, { ...item });
+  }
+}
+const result = Array.from(map.values());
+console.log(result);
+*/
