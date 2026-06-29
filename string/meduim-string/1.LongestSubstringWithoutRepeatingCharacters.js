@@ -18,7 +18,7 @@ function lengthOfLongestSubstring(str) {
     if (visited[ch] !== undefined && visited[ch] >= left) {
       left = visited[ch] + 1; //  left will shifted by 1 position
     }
-    visited[ch] = right;
+    visited[ch] = right; // find the index of the character and store it in the visited object
     let currentLength = right - left + 1;
     if (currentLength > maxLength) {
       maxLength = currentLength;
